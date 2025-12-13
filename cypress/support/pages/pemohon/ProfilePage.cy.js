@@ -1,6 +1,5 @@
 class ProfilePage {
   elements = {
-    email: () => cy.get('input[placeholder*="Email Pengguna"]'),
     locatorMenu: () =>
       cy.get('div[class*="text-white menu-custom menu-title"]'),
     locatorSubMenu: () => cy.get('a[class*="menu-link px-5"]'),
