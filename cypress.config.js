@@ -14,7 +14,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     env: {
-      stage: "https://staging.mppdigital.go.id/admin/sign-in",
+      stageAdmin: "https://staging.mppdigital.go.id/admin/sign-in",
+      stagePemohon: "https://staging.mppdigital.go.id/user/sign-in",
     },
   },
 });
