@@ -73,6 +73,29 @@ class RiwayatPage {
       }
     });
   }
+
+  pembatalanPermohonan(res, reason) {
+    cy.wait(500);
+    let data = res.response.body.data;
+    data.forEach((element) => {
+      let status = element.status;
+      if (status == "Hold") {
+        cy.get(
+          'button[class*="el-button el-button--danger el-button--small"] > span'
+        )
+          .contains("Batalkan Permohonan")
+          .click();
+        cy.wait(500);
+        cy.get('textarea[placeholder*="Silahkan Masukan Alasan"]')
+          .type(reason)
+          .should("have.value", reason);
+        cy.get('button[class*="el-button el-button--primary is-plain"]')
+          .eq(1)
+          .click();
+        cy.wait(500);
+      }
+    });
+  }
 }
 
 module.exports = new RiwayatPage();
