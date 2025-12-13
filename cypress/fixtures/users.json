@@ -3,9 +3,9 @@
     "email": "pemohons1@gmail.com",
     "password": "Kartu789*@#"
   },
-  "validUser": {
-    "email": "admegov@gmail.com",
-    "password": "admegov@gmail.com"
+  "adminInstansi": {
+    "email": "admin_aceh_selatan@gmail.com",
+    "password": "Demo789*@#"
   },
   "invalidUser": {
     "email": "admin@mail.com",
