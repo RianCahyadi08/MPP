@@ -1,16 +1,17 @@
 class LoginPage {
   elements = {
-    email: () => cy.get('input[type="email]'),
-    password: () => cy.get('input[type="Password"]'),
+    email: () => cy.get('input[placeholder*="Email Pengguna"]'),
+    password: () => cy.get('input[placeholder*="Kata Sandi"]'),
     submitBtn: () => cy.get('button[id*="kt_sign_in_submit"]'),
-    assertDashboard: () => cy.get('li[class*="breadcrumb-item text-muted"]'),
   };
 
-  login(email, password) {
+  loginPemohon(email, password) {
     this.elements.email().type(email);
     this.elements.password().type(password);
     this.elements.submitBtn().click();
-    this.elements.assertDashboard().contains("Dashboard").should("be.visible");
+    cy.get('span[class="menu-title"]')
+      .contains("Dashboard")
+      .should("be.visible");
   }
 }
 

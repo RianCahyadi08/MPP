@@ -1,4 +1,8 @@
 {
+  "pemohon": {
+    "email": "pemohons1@gmail.com",
+    "password": "Kartu789*@#"
+  },
   "validUser": {
     "email": "admegov@gmail.com",
     "password": "admegov@gmail.com"
