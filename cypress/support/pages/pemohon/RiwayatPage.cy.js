@@ -50,6 +50,29 @@ class RiwayatPage {
     this.elements.btnKirim().click();
     cy.wait(500);
   }
+
+  revisiPermohonan(res) {
+    // debugger;
+    cy.wait(500);
+    let data = res.response.body.data;
+    data.forEach((element) => {
+      let status = element.status;
+      if (status == "ditolak") {
+        cy.get(
+          'button[class*="el-button el-button--danger el-button--small"] > span'
+        )
+          .contains("Detail Penolakan")
+          .click();
+        cy.wait(500);
+        cy.get('button[class*="el-button el-button--primary is-plain"]')
+          .eq(1)
+          .click();
+        cy.wait(500);
+        cy.get('button[class*="btn btn-primary"]').click();
+        cy.wait(500);
+      }
+    });
+  }
 }
 
 module.exports = new RiwayatPage();
