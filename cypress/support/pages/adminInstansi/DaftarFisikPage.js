@@ -49,6 +49,17 @@ class DaftarFisikPage {
     cy.get('button[class*="btn btn-primary"]').click();
     cy.wait(500);
   }
+
+  detail() {
+    cy.get('i[class*="ki-outline ki-eye fs-2 text-primary icon-hover"]')
+      .eq(0)
+      .click();
+    cy.wait(1000);
+  }
+  detailDataLayanan() {
+    cy.get('a[class*="btn btn-outline"]').eq(2).click();
+    cy.wait(500);
+  }
 }
 
 module.exports = new DaftarFisikPage();
