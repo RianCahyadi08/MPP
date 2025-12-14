@@ -83,6 +83,10 @@ class DaftarFisikPage {
     cy.get('button[class*="btn btn-primary"]').click();
     cy.wait(500);
   }
+
+  deleteDataLayanan() {
+    cy.log("Delete Data Layanan");
+  }
 }
 
 module.exports = new DaftarFisikPage();
