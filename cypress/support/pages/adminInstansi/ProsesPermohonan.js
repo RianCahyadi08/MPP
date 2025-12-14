@@ -17,6 +17,16 @@ class ProsesPermohonan {
     ).click();
     cy.wait(500);
   }
+
+  mengembalikanAlurProses() {
+    cy.get('h3[class*="fs-4 fw-semibold mb-0 me-4"]').click();
+    cy.wait(500);
+  }
+
+  tolakPermohonan() {
+    cy.get('h3[class*="fs-4 fw-semibold mb-0 me-4"]').click();
+    cy.wait(500);
+  }
 }
 
 module.exports = new ProsesPermohonan();
