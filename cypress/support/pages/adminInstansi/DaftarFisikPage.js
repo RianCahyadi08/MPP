@@ -56,8 +56,31 @@ class DaftarFisikPage {
       .click();
     cy.wait(1000);
   }
+
   detailDataLayanan() {
     cy.get('a[class*="btn btn-outline"]').eq(2).click();
+    cy.wait(500);
+  }
+
+  updatePelayananPublic() {
+    cy.get('button[class*="btn btn-sm btn-primary float-end"]').click();
+    cy.wait(500);
+  }
+
+  updateLayananMPPFisik() {
+    this.detailDataLayanan();
+    cy.get(
+      'a[class*="btn btn-sm btn-icon-white btn-primary btn-text-white hover-scale"]'
+    ).click();
+    cy.wait(500);
+    cy.get(
+      'div[class*="el-select__selected-item el-select__placeholder is-transparent"]'
+    ).type("Name Instansi");
+    cy.wait(500);
+    cy.get(
+      'div[class*="ck-blurred ck ck-content ck-editor__editable ck-rounded-corners ck-editor__editable_inline"]'
+    ).type("Lorem ipsum dolor sir amet");
+    cy.get('button[class*="btn btn-primary"]').click();
     cy.wait(500);
   }
 }
