@@ -87,6 +87,17 @@ class DaftarFisikPage {
   deleteDataLayanan() {
     cy.log("Delete Data Layanan");
   }
+
+  deleteDataDaerah() {
+    cy.get('i[class*="ki-outline ki-trash fs-2 text-danger icon-hover"]')
+      .eq(0)
+      .click();
+    cy.wait(500);
+    cy.get(
+      'button[class*="swal2-confirm swal2-styled swal2-default-outline"]'
+    ).click();
+    cy.wait(500);
+  }
 }
 
 module.exports = new DaftarFisikPage();
