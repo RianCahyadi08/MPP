@@ -14,7 +14,7 @@ class RekapIzinBelumSelesai {
     cy.realPress("ArrowDown");
     cy.wait(500);
     cy.realPress("Enter");
-    cy.get('input[placeholder*="Tgl Akhir"]');
+    cy.get('input[placeholder*="Tgl Akhir"]').click();
     cy.wait(500);
     cy.realPress("ArrowDown");
     cy.wait(500);
