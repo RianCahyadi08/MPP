@@ -7,6 +7,10 @@
     "email": "admin_aceh_selatan@gmail.com",
     "password": "Demo789*@#"
   },
+  "admin": {
+    "email": "admegov@gmail.com",
+    "password": "Admegov789*@#"
+  },
   "invalidUser": {
     "email": "admin@mail.com",
     "password": "wrongpassword"

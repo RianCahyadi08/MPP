@@ -24,6 +24,17 @@ class LoginPage {
       .contains("Dashboard")
       .should("be.visible");
   }
+
+  loginAdmin(email, password) {
+    cy.get('input[placeholder*="Masukan Email Pengguna"]')
+      .type(email)
+      .should("have.value", email);
+    this.elements.password().type(password).should("have.value", password);
+    this.elements.submitBtn().click();
+    cy.get('li[class="breadcrumb-item text-muted"]')
+      .contains("Dashboard")
+      .should("be.visible");
+  }
 }
 
 module.exports = new LoginPage();
